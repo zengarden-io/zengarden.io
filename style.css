@@ -1,0 +1,279 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+@import 'style-guide.css';
+
+/* basic elements */
+html {
+	margin: 0;
+	padding: 0;
+	}
+body { 
+	font: 75% georgia, sans-serif;
+	line-height: 1.88889;
+	color: #555753; 
+	margin: 0; 
+	padding: 0;
+	}
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	}
+h3 { 
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: #7D775C;
+	}
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #B7A5DF;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #D4CDDC;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #9685BA;
+	}
+abbr {
+	border-bottom: none;
+	}
+
+/* specific divs */
+.page-wrapper { 
+	padding: 10px; 
+	margin: 0; 
+	position: relative;
+	}
+
+	.page-wrapper section{ 
+		padding:20px;
+	}
+
+	.page-wrapper div{ 
+		padding:20px;
+	}
+
+.intro { 
+	width: 100%;
+	}
+
+.intro > header:nth-child(1){
+	background: url(CSS_Outline.svg) no-repeat;
+	background-size: cover;
+	max-width: 100%;
+	padding-top: 0;
+	padding-bottom: 50%;
+}
+	
+
+header h1 { 
+	font-size: 2em;
+	padding-left: 10%;
+	padding-top: 180px;
+	}
+header h2 {
+	font-size: 1em;
+	padding-left: 10%;
+	padding-bottom: 35%;
+	}
+header {
+	padding-top: 20px;
+	height: 87px;
+}
+
+.summary { 
+	margin: 20px 20px 20px 10px; 
+	}
+.summary p {
+	font: italic 1.1em/2.2 georgia; 
+	text-align: center;
+	}
+
+.preamble {
+	clear: right; 
+	padding: 0px 10px 0 10px;
+	}
+.supporting {	
+	padding-left: 10px; 
+	margin-bottom: 40px;
+	}
+
+footer { 
+	text-align: center; 
+	}
+footer a:link, footer a:visited { 
+	margin-right: 20px; 
+	}
+
+.sidebar {
+	position: absolute; 
+	top: 0;
+	right: 0;
+	
+	}
+	
+	
+
+.sidebar .wrapper { 
+	display: flex;
+		flex-direction: column;
+	font: 10px verdana, sans-serif; 
+	
+	padding: 10px; 
+	
+	}
+
+	
+
+		.sidebar .wrapper div{ 
+			position: absolute; 
+			background-color: none;
+	right: 0;
+			display: flex;
+			flex-direction: row;
+			margin: 10px 10% 10px;
+			justify-content: space-between;
+			width: 330px; 
+			
+			transition: 3s 0.2s;
+			}
+
+			
+
+			.sidebar .wrapper div:nth-child(1){ 
+				top: 0;
+				
+				margin-right: -250px;
+				width: 380px; 
+				}
+
+				
+			.sidebar .wrapper div:nth-child(2){ 
+				top: 0;
+				margin-top: 250px;
+				margin-right: -130px;
+				width: 230px; 
+				}
+
+			.sidebar .wrapper div:nth-child(3){ 
+				top: 0;
+				margin-top: 350px;
+				margin-right: -160px;
+				width: 230px; 
+				}
+
+				.summary{
+				margin-top: 200px;
+				}
+
+				.sidebar .wrapper div:hover{
+					background-color: black;
+					margin-right: 50px;
+				}
+				
+
+			.sidebar .wrapper div nav{ 
+				
+				background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; 
+				}
+
+				.sidebar .wrapper div ul{ 
+				
+					background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; 
+					}
+
+			
+.sidebar h3.select { 
+	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left; 
+	margin: 10px 0 5px 0; 
+	width: 97px; 
+	height: 16px; 
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.archives { 
+	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left; 
+	margin: 25px 0 5px 0; 
+	width:57px; 
+	height: 14px; 
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.resources { 
+	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left; 
+	margin: 25px 0 5px 0; 
+	width:63px; 
+	height: 10px; 
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+
+
+.sidebar ul {
+	margin: 0;
+	padding: 0;
+	}
+.sidebar li {
+	line-height: 1.3em; 
+	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center; 
+	display: block; 
+	padding-top: 5px; 
+	margin-bottom: 5px;
+	list-style-type: none;
+	}
+.sidebar li a:link {
+	color: #988F5E;
+	}
+.sidebar li a:visited {
+	color: #B3AE94;
+	}
+
+
+.extra1 {
+	/*background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat; */
+	position: absolute; 
+	top: 40px; 
+	right: 0; 
+	width: 148px; 
+	height: 110px;
+	}
+
+	@media (min-width:400px) {
+		header h1 { 
+			padding-top: 0;
+			}
+		
+	}
+
+	@media (min-width:800px) {
+		header h1 { 
+			font-size: 3em;
+			padding-left: 20%;
+			padding-top: 0;
+			}
+		header h2 {
+			font-size: 2em;
+			padding-left: 20%;
+			padding-bottom: 35%;
+			}
+		.sidebar .wrapper div{ 
+			position: absolute; 
+			background-color: green;
+		}
+	}

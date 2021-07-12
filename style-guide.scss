@@ -1,0 +1,44 @@
+@import 'partials/reset';
+@import 'partials/prefix-mixins';
+@import 'partials/layout'; // responsive grid and media queries
+@import 'partials/variables';
+@import 'partials/colors';
+@import 'partials/background';
+@import 'partials/patterns';
+@import 'partials/navigation';
+@import 'partials/page-title';
+@import 'partials/typography';
+@import 'partials/buttons';
+@import 'partials/branding';
+@import 'partials/html-elements';
+/*@import 'partials/basic-style';*/
+
+// sass --watch style-guide.scss:style-guide.css
+
+.intro div, .participation {
+    background-color: $color-6;
+    padding-right: 20px;
+}
+
+.benefits, .requirements p:last-of-type, footer{
+    background-color: $color-2;
+    
+}
+
+.benefits h3, .benefits p{
+    color: white;
+}
+
+.benefits{
+    color: white;
+    padding: 20px;
+}
+
+
+.requirements p:last-of-type, footer{
+    padding: 40px;
+    font-size: 2em;
+}
+
+
+
