@@ -21,7 +21,7 @@
 @import 'partials/html-elements';
 /*@import 'partials/basic-style';*/
 
-// sass --watch style-guide.scss:style-guide.css
+// sass --watch style.scss:style.css
 
 .intro div, .participation {
     background-color: $color-6;
@@ -287,14 +287,14 @@ footer a:link, footer a:visited {
 	}
 
 
-.extra1 {
+/*.extra1 {
 	/*background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat; */
-	position: absolute; 
+	/*position: absolute; 
 	top: 40px; 
 	right: 0; 
 	width: 148px; 
 	height: 110px;
-	}
+	}*/
 
 	@media (min-width:400px) {
 		header h1 { 
