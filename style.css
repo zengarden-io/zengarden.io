@@ -374,6 +374,7 @@ h3 {
   letter-spacing: 1px;
   margin-bottom: 0;
   color: #7D775C;
+  text-decoration: underline dotted;
 }
 
 a:link {
@@ -412,10 +413,9 @@ abbr {
   padding: 20px;
 }
 
-.intro {
-  width: 100%;
-}
-
+/*.intro { 
+	width: 100%;
+	}*/
 .intro > header:nth-child(1) {
   background: url(CSS_Outline.svg) no-repeat;
   background-size: cover;
@@ -513,10 +513,9 @@ footer a:link, footer a:visited {
   width: 230px;
 }
 
-.summary {
-  margin-top: 200px;
-}
-
+/*.summary{
+margin-top: 200px;
+}*/
 .sidebar .wrapper div:hover {
   background-color: black;
   margin-right: 50px;
@@ -590,14 +589,25 @@ right: 0;
 width: 148px; 
 height: 110px;
 }*/
+@media (max-width: 330px) {
+  .summary {
+    max-width: 45%;
+  }
+}
+@media (max-width: 650px) {
+  .summary {
+    max-width: 55%;
+  }
+}
 @media (min-width: 400px) {
   header h1 {
+    font-size: 3.5em;
     padding-top: 0;
   }
 }
 @media (min-width: 800px) {
   header h1 {
-    font-size: 3em;
+    font-size: 5em;
     padding-left: 20%;
     padding-top: 0;
   }
@@ -611,6 +621,11 @@ height: 110px;
   .sidebar .wrapper div {
     position: absolute;
     background-color: green;
+  }
+}
+@media (min-width: 1000px) {
+  header h1 {
+    font-size: 10em;
   }
 }
 

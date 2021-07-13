@@ -71,6 +71,7 @@ h3 {
 	letter-spacing: 1px; 
 	margin-bottom: 0; 
 	color: #7D775C;
+	text-decoration: underline dotted;
 	}
 a:link { 
 	font-weight: bold; 
@@ -105,9 +106,9 @@ abbr {
 		padding:20px;
 	}
 
-.intro { 
+/*.intro { 
 	width: 100%;
-	}
+	}*/
 
 .intro > header:nth-child(1){
 	background: url(CSS_Outline.svg) no-repeat;
@@ -214,9 +215,9 @@ footer a:link, footer a:visited {
 				width: 230px; 
 				}
 
-				.summary{
+				/*.summary{
 				margin-top: 200px;
-				}
+				}*/
 
 				.sidebar .wrapper div:hover{
 					background-color: black;
@@ -244,6 +245,7 @@ footer a:link, footer a:visited {
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
+	//text-decoration: underline dotted;
 	}
 .sidebar h3.archives { 
 	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left; 
@@ -254,6 +256,7 @@ footer a:link, footer a:visited {
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
+	//text-decoration: underline dotted;
 	}
 .sidebar h3.resources { 
 	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left; 
@@ -264,6 +267,7 @@ footer a:link, footer a:visited {
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
+	//text-decoration: underline dotted;
 	}
 
 
@@ -296,8 +300,21 @@ footer a:link, footer a:visited {
 	height: 110px;
 	}*/
 
+	@media (max-width:330px) {
+		.summary { 
+			max-width: 45%;
+			}
+		}
+
+	@media (max-width:650px) {
+	.summary { 
+		max-width: 55%;
+		}
+	}
+
 	@media (min-width:400px) {
 		header h1 { 
+			font-size: 3.5em;
 			padding-top: 0;
 			}
 		
@@ -305,7 +322,7 @@ footer a:link, footer a:visited {
 
 	@media (min-width:800px) {
 		header h1 { 
-			font-size: 3em;
+			font-size: 5em;
 			padding-left: 20%;
 			padding-top: 0;
 			}
@@ -318,4 +335,11 @@ footer a:link, footer a:visited {
 			position: absolute; 
 			background-color: green;
 		}
+	}
+
+	@media (min-width:1000px) {
+		header h1 { 
+			font-size: 10em;
+			}
+		
 	}
