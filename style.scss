@@ -23,24 +23,36 @@
 
 // sass --watch style.scss:style.css
 
-.intro div, .participation {
+.intro div{
     background-color: $color-6;
     padding-right: 20px;
 }
 
-.benefits, .requirements p:last-of-type, footer{
+.participation {
     background-color: $color-2;
-    
 }
 
-.benefits h3, .benefits p{
-    color: white;
+.requirements p:last-of-type, footer{
+    background-color: $color-2;    
 }
+
+.benefits{
+	background-color: $color-6;
+}
+
+/*.benefits h3, .benefits p{
+    color: white;
+}*/
 
 .benefits{
     color: white;
     padding: 20px;
 }
+
+.preamble h3, .benefits h3{
+    color: $color-1;
+}
+
 
 
 .requirements p:last-of-type, footer{
@@ -70,7 +82,8 @@ h3 {
 	font: italic normal 1.4em georgia, sans-serif;
 	letter-spacing: 1px; 
 	margin-bottom: 0; 
-	color: #7D775C;
+	//color: #7D775C;
+	color: $color-5;
 	text-decoration: underline dotted;
 	}
 a:link { 
@@ -102,13 +115,11 @@ abbr {
 		padding:20px;
 	}
 
-	.page-wrapper div{ 
+	/*.page-wrapper div{ 
 		padding:20px;
-	}
+	}	*/
 
-/*.intro { 
-	width: 100%;
-	}*/
+
 
 .intro > header:nth-child(1){
 	background: url(CSS_Outline.svg) no-repeat;
@@ -134,9 +145,24 @@ header {
 	height: 87px;
 }
 
+.summary, .preamble, .supporting, .explanation, .participation, .requirements p{
+	padding: 1em;
+}
+
+.explanation h3{
+	color: $color-2;
+}
+
+.requirements p:last-of-type{
+	padding: 0;
+	font-size: 1.5em;
+	text-align: center;
+}
+
 .summary { 
-	margin: 20px 20px 20px 10px; 
+	margin-top: 2.5em; 
 	}
+
 .summary p {
 	font: italic 1.1em/2.2 georgia; 
 	text-align: center;
@@ -144,10 +170,10 @@ header {
 
 .preamble {
 	clear: right; 
-	padding: 0px 10px 0 10px;
+	//padding: 0px 10px 0 10px;
 	}
 .supporting {	
-	padding-left: 10px; 
+	//padding-left: 10px; 
 	margin-bottom: 40px;
 	}
 
@@ -302,7 +328,7 @@ footer a:link, footer a:visited {
 
 	@media (max-width:330px) {
 		.summary { 
-			max-width: 45%;
+			max-width: 40%;
 			}
 		}
 
@@ -317,10 +343,12 @@ footer a:link, footer a:visited {
 			font-size: 3.5em;
 			padding-top: 0;
 			}
-		
+			.summary { 
+				margin-top: 0; 
+				}
 	}
 
-	@media (min-width:800px) {
+	@media (min-width:850px) {
 		header h1 { 
 			font-size: 5em;
 			padding-left: 20%;
@@ -337,7 +365,7 @@ footer a:link, footer a:visited {
 		}
 	}
 
-	@media (min-width:1000px) {
+	@media (min-width:1100px) {
 		header h1 { 
 			font-size: 10em;
 			}
