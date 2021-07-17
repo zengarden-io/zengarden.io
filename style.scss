@@ -191,7 +191,7 @@ footer a:link, footer a:visited {
 
 		.sidebar .wrapper div{ 
 			position: absolute; 
-			background-color: none;
+			background-color: transparent;
 			right: 0;
 			@include flex-vendor-prefixes;
 			flex-direction: row;
