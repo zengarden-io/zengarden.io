@@ -448,8 +448,16 @@ header {
   height: 87px;
 }
 
-.summary, .preamble, .supporting, .explanation, .participation, .requirements p {
-  padding: 0 1em;
+.summary, .preamble, .supporting, .explanation, .participation {
+  padding: 2em;
+}
+
+.requirements {
+  padding: 0;
+}
+
+.requirements p {
+  padding: 0.5em;
 }
 
 .explanation h3 {
