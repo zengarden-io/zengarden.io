@@ -377,6 +377,7 @@ body {
 
 p {
   margin-top: 0;
+  margin-bottom: 0;
   text-align: justify;
 }
 
@@ -384,7 +385,7 @@ h3 {
   font: italic normal 1.4em georgia, sans-serif;
   letter-spacing: 1px;
   margin-bottom: 0;
-  color: #f8f7ff;
+  color: #7D775C;
   text-decoration: underline dotted;
 }
 
@@ -457,7 +458,6 @@ header {
 }
 
 .requirements p:last-of-type {
-  padding: 0;
   font-size: 1.5em;
   text-align: center;
 }
@@ -509,6 +509,15 @@ footer a:link, footer a:visited {
   margin: 10px 10% 10px;
   justify-content: space-between;
   width: 330px;
+  padding: 1em;
+  transition: 3s 0.2s;
+}
+.sidebar .wrapper div h3 {
+  color: #7D775C;
+  transition: 3s 0.2s;
+}
+.sidebar .wrapper div a:link {
+  font-size: 1em;
   transition: 3s 0.2s;
 }
 
@@ -528,8 +537,8 @@ footer a:link, footer a:visited {
 .sidebar .wrapper div:nth-child(3) {
   top: 0;
   margin-top: 350px;
-  margin-right: -160px;
-  width: 230px;
+  margin-right: -140px;
+  width: 240px;
 }
 
 /*.summary{
@@ -537,43 +546,31 @@ margin-top: 200px;
 }*/
 .sidebar .wrapper div:hover {
   background-color: black;
-  margin-right: 50px;
+  margin-right: 10px;
 }
-
-.sidebar .wrapper div nav {
-  background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;
+.sidebar .wrapper div:hover h3 {
+  color: #f8f7ff;
 }
-
-.sidebar .wrapper div ul {
-  background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;
+.sidebar .wrapper div:hover a:link {
+  font-size: 1.3em;
 }
 
 .sidebar h3.select {
-  background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
   margin: 10px 0 5px 0;
-  width: 97px;
   height: 16px;
-  text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
 
 .sidebar h3.archives {
-  background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
   margin: 25px 0 5px 0;
-  width: 57px;
   height: 14px;
-  text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
 
 .sidebar h3.resources {
-  background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
   margin: 25px 0 5px 0;
-  width: 63px;
-  height: 10px;
-  text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -590,14 +587,28 @@ margin-top: 200px;
   padding-top: 5px;
   margin-bottom: 5px;
   list-style-type: none;
-}
-
-.sidebar li a:link {
-  color: #988F5E;
+  color: #f8f7ff;
 }
 
 .sidebar li a:visited {
   color: #B3AE94;
+}
+
+.preamble::after {
+  content: "";
+  display: block;
+  height: 50vh;
+  background-image: url(CSS_Isometric.svg);
+  background-repeat: no-repeat;
+  padding-bottom: 50%;
+}
+
+.benefits::before {
+  content: url(CSS_Flatline.svg);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50vw;
 }
 
 /*.extra1 {
@@ -630,7 +641,7 @@ height: 110px;
 }
 @media (min-width: 850px) {
   header h1 {
-    font-size: 5em;
+    font-size: 7em;
     padding-left: 20%;
     padding-top: 0;
   }
@@ -645,8 +656,53 @@ height: 110px;
     position: absolute;
     background-color: green;
   }
+
+  .main {
+    display: grid;
+    grid-template: repeat(2, 1fr) 0.5fr 2fr 0.2fr/repeat(2, 1fr);
+  }
+  .main div:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .main div:nth-child(2) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .main div:nth-child(3) {
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .main div:nth-child(4) {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .main footer:first-of-type {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .main .explanation, .main .participation {
+    padding: 3em;
+  }
+  .main .benefits {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main .benefits h3 {
+    margin: 0.5em;
+  }
 }
-@media (min-width: 1100px) {
+@media (min-width: 1300px) {
   header h1 {
     font-size: 10em;
   }
