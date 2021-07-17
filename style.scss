@@ -40,9 +40,6 @@
 	background-color: $color-6;
 }
 
-/*.benefits h3, .benefits p{
-    color: white;
-}*/
 
 .benefits{
     color: white;
@@ -54,12 +51,15 @@
 }
 
 
-
 .requirements p:last-of-type, footer{
     padding: 40px;
     font-size: 2em;
 }
 
+.requirements h3 {
+	color: $color-1;
+	padding: 2em 0 0 2em;
+}
 
 
 /* basic elements */
@@ -83,7 +83,7 @@ h3 {
 	font: italic normal 1.4em georgia, sans-serif;
 	letter-spacing: 1px; 
 	margin-bottom: 0; 
-	color: #7D775C;	
+	color: $color-5;	
 	text-decoration: underline dotted;
 	}
 a:link { 
@@ -115,11 +115,6 @@ abbr {
 		padding:20px;
 	}
 
-	/*.page-wrapper div{ 
-		padding:20px;
-	}	*/
-
-
 
 .intro > header:nth-child(1){
 	background: url(CSS_Outline.svg) no-repeat;
@@ -131,12 +126,12 @@ abbr {
 	
 
 header h1 { 
-	font-size: 2em;
+	font-size: 2.4em;
 	padding-left: 10%;
 	padding-top: 180px;
 	}
 header h2 {
-	font-size: 1em;
+	font-size: 1.1em;
 	padding-left: 10%;
 	padding-bottom: 35%;
 	}
@@ -146,7 +141,7 @@ header {
 }
 
 .summary, .preamble, .supporting, .explanation, .participation, .requirements p{
-	padding: 1em;
+	padding: 0 1em;
 }
 
 .explanation h3{
@@ -163,16 +158,14 @@ header {
 	}
 
 .summary p {
-	font: italic 1.1em/2.2 georgia; 
+	font: italic 1.6em/2.2 georgia; 
 	text-align: center;
 	}
 
 .preamble {
-	clear: right; 
-	//padding: 0px 10px 0 10px;
+	clear: right;
 	}
-.supporting {	
-	//padding-left: 10px; 
+.supporting {
 	margin-bottom: 40px;
 	}
 
@@ -186,21 +179,15 @@ footer a:link, footer a:visited {
 .sidebar {
 	position: absolute; 
 	top: 0;
-	right: 0;
-	
-	}
-	
-	
+	right: 0;	
+	}	
 
 .sidebar .wrapper { 
 	display: flex;
-		flex-direction: column;
-	font: 10px verdana, sans-serif; 
-	
-	padding: 10px; 
-	
+	flex-direction: column;
+	font: 10px verdana, sans-serif; 	
+	padding: 10px; 	
 	}
-
 	
 
 		.sidebar .wrapper div{ 
@@ -213,6 +200,11 @@ footer a:link, footer a:visited {
 			justify-content: space-between;
 			width: 330px; 
 			padding: 1em;
+			z-index: 1;
+			-webkit-transition: 3s 0.2s;
+			-moz-transition: 3s 0.2s;
+			-ms-transition: 3s 0.2s;
+			-o-transition: 3s 0.2s;
 			transition: 3s 0.2s;
 			h3{
 					color: #7D775C;
@@ -228,11 +220,9 @@ footer a:link, footer a:visited {
 			
 
 			.sidebar .wrapper div:nth-child(1){ 
-				top: 0;
-				
+				top: 0;				
 				margin-right: -250px;
-				width: 380px;
-				
+				width: 380px;				
 				}
 
 				
@@ -251,66 +241,39 @@ footer a:link, footer a:visited {
 				
 				}
 
-				/*.summary{
-				margin-top: 200px;
-				}*/
-
 				.sidebar .wrapper div:hover{
 					background-color: black;
 					margin-right: 10px;
+					z-index: 2;
 					h3{
 						color: $color-5;
 					}
 
 					a:link { 
-						font-size: 1.3em;
+						font-size: 1.5em;
+						padding: 1.5em 0;
 						}
 				}
-				
-
-			.sidebar .wrapper div nav{ 
-				
-				//background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; 
-				}
-
-				.sidebar .wrapper div ul{ 
-				
-					//background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; 
-					}
 
 			
 .sidebar h3.select { 
-	//background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left; 
 	margin: 10px 0 5px 0; 
-	//width: 97px; 
-	height: 16px; 
-
-	//text-indent: 100%;
+	padding: 1.5em;
+	height: 16px;
 	white-space: nowrap;
 	overflow: hidden;
-	//text-decoration: underline dotted;
 	}
 .sidebar h3.archives { 
-	//background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	//width:57px; 
+	margin: 25px 0 5px 0;
 	height: 14px; 
-
-	//text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
-	//text-decoration: underline dotted;
 	}
-.sidebar h3.resources { 
-	//background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left; 
+.sidebar h3.resources {  
 	margin: 25px 0 5px 0; 
-	//width:63px; 
-	//height: 10px; 
-
-	//text-indent: 100%;
+	padding: 1.5em;
 	white-space: nowrap;
 	overflow: hidden;
-	//text-decoration: underline dotted;
 	}
 
 
@@ -333,64 +296,90 @@ footer a:link, footer a:visited {
 	}
 
 	.preamble::after {
-		//content: url(CSS_Isometric.svg);
-		//display: block;
-		//margin-left: auto;
-		//margin-right: auto;
-		//max-width: 50vw;
-		content: "";
+		content: url(CSS_Isometric.svg);
 		display: block;
-		height: 50vh;
-		//max-width: 10%;
-		background-image: url(CSS_Isometric.svg);
-		background-repeat: no-repeat;
-		padding-bottom: 50%;
+		-webkit-transform: scale(0.3);
+		-moz-transform: scale(0.3);
+		-ms-transform: scale(0.3);
+		-o-transform: scale(0.3);
+		transform: scale(0.3);
+		height: 12em;
 	}
 
 .benefits::before {
 	content: url(CSS_Flatline.svg);
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 50vw;
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	-ms-transform: scale(0.3);
+	-o-transform: scale(0.3);
+	transform: scale(0.3);
+	height: 12em;
 }
 
-
-/*.extra1 {
-	/*background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat; */
-	/*position: absolute; 
-	top: 40px; 
-	right: 0; 
-	width: 148px; 
-	height: 110px;
-	}*/
-
-	@media (max-width:330px) {
-		.summary { 
-			max-width: 40%;
-			}
-		}
-
-	@media (max-width:650px) {
-	.summary { 
-		max-width: 55%;
-		}
+.summary { 
+	max-width: 55%;
 	}
 
+
+	// media queries
+
 	@media (min-width:400px) {
+		.sidebar .wrapper div:nth-child(1) {
+			top: 2em;
+		}
+
 		header h1 { 
-			font-size: 3.5em;
+			font-size: 3.3em;
 			padding-top: 0;
+			}
+			header h2 {
+				font-size: 1.2em;
 			}
 			.summary { 
 				margin-top: 0; 
+				max-width: 65%;
 				}			
-				
+		.preamble::after {
+				transform: scale(0.7);
+				height: 20em;
+				text-align: center;
+			}
+			
+		.benefits::before {
+				transform: scale(0.7);
+				height: 17em;
+				text-align: center;
+			}		
+	}
+
+	@media (min-width:600px) {
+		.summary { 
+			max-width: 75%;
+			}
+	}
+
+	@media (min-width:750px) {
+		header h1 { 
+			font-size: 5em;
+			}
+		header h2 {
+			font-size: 1.7em;
+			}
+	.summary { 
+		max-width: 100%;
+		}
+		.sidebar .wrapper div{ 
+			background-color: green;
+			h3{
+				color: $color-5;
+			}
+		}
 	}
 
 	@media (min-width:850px) {
 		header h1 { 
-			font-size: 7em;
+			font-size: 6.5em;
 			padding-left: 20%;
 			padding-top: 0;
 			}
@@ -401,16 +390,12 @@ footer a:link, footer a:visited {
 			}
 		.sidebar .wrapper div{ 
 			position: absolute; 
-			background-color: green;
+			
 		}
 
 		.main{
 			display: grid;
-
-			//grid-template: repeat(6, 40rem) / repeat(2, 1fr);
-			//grid-template: repeat(3, 30rem) 80rem 10rem / repeat(2, 1fr);
-
-			grid-template: repeat(2, 1fr) 0.5fr 2fr 0.2fr / repeat(2, 1fr);
+			grid-template: repeat(2, 1fr) 0.5fr 1.6fr 0.2fr / repeat(2, 1fr);
 
 			div:nth-child(1){
 				grid-row-start: 1;
@@ -438,6 +423,9 @@ footer a:link, footer a:visited {
 				grid-row-end: 5;
 				grid-column-start: 1;
 				grid-column-end: 3;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
 			}
 
 			footer:first-of-type{
@@ -448,11 +436,18 @@ footer a:link, footer a:visited {
 			}
 
 			.explanation, .participation{
+				margin: 2em;
 				padding: 3em;
 			}
 			
-			.benefits{
+			.benefits{				
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
 				display: flex;
+				justify-content: space-between;
+				justify-content: space-between;
 				justify-content: space-between;
 	
 				h3{
@@ -461,11 +456,43 @@ footer a:link, footer a:visited {
 			}
 		}
 
+		.preamble::after {
+			-webkit-transform: scale(0.8);
+			-moz-transform: scale(0.8);
+			-ms-transform: scale(0.8);
+			-o-transform: scale(0.8);
+			transform: scale(0.8);
+			height: 22em;
+		}
+		
+	.benefits::before {
+			-webkit-transform: scale(0.8);
+			-moz-transform: scale(0.8);
+			-ms-transform: scale(0.8);
+			-o-transform: scale(0.8);
+			transform: scale(0.8);
+		}
+		
+
 	}
 
 	@media (min-width:1300px) {
 		header h1 { 
 			font-size: 10em;
 			}
-		
+		.preamble::after {
+			-webkit-transform: scale(1);
+			-moz-transform: scale(1);
+			-ms-transform: scale(1);
+			-o-transform: scale(1);
+			transform: scale(1);
+			}
+			
+		.benefits::before {
+			-webkit-transform: scale(1);
+			-moz-transform: scale(1);
+			-ms-transform: scale(1);
+			-o-transform: scale(1);
+			transform: scale(1);
+			}	
 	}
